@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100vh;
+  min-height: 100vh;
+  background-image: linear-gradient(#a8d5fc9f, #f9c3f395);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.wrapper-list {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.9rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.title h1 {
+  color: #ca98fda8;
+  font-weight: 800;
+  font-size: 1.9rem;
+  margin: 0 0 0 35%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 160px;
+  animation-name: type;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  1%, 100%{
+    border-right: 0.2rem solid rgb(255, 255, 255);
+  }
+}
