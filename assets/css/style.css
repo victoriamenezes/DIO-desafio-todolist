@@ -93,6 +93,7 @@ body {
 
 .buttons {
   display: flex;
+  justify-content: center;
 }
 
 #addListBtn, #clearListBtn {
@@ -111,7 +112,7 @@ body {
 .to-do-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: rgba(255, 235, 205, 0.05);
   /* width: 80vh;
   height: 50vh; */
@@ -123,7 +124,7 @@ body {
 
 .to-do-list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 @keyframes type {
@@ -149,6 +150,8 @@ body {
 .todo {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  transition: all;
 }
 
 /* .todo li {
@@ -159,7 +162,7 @@ body {
   color: rgba(0, 158, 249, 0.962);
   background-color: rgba(127, 255, 212, 0.211);
   border-color: azure;
-  padding: 0.2rem;
+  padding: 0.4rem;
   margin: 0.2rem;
   margin-left: 2rem;
 }
@@ -170,11 +173,16 @@ body {
   transform: scale(1.2);
 }
 
+.completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
 .delete-btn {
   color: rgb(203, 71, 71);
   background-color: rgba(127, 255, 212, 0.211);
   border-color: azure;
-  padding: 0.2rem;
+  padding: 0.4rem;
   margin: 0.2rem;
 }
 

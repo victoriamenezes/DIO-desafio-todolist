@@ -8,6 +8,7 @@ const toDoList = document.querySelector('.to-do-list')
 
 //eventos de escutas
 toDoBtn.addEventListener('click', addToDo)
+toDoList.addEventListener('click', checkOrDelete)
 
 //funções
 function addToDo(event) {
@@ -18,7 +19,8 @@ function addToDo(event) {
 
   const toDoLi = document.createElement('li')
   toDoLi.classList.add('todo-list')
-  toDoLi.innerText = 'Coraline'
+  toDoLi.innerText = toDoInput.value
+  toDoInput.value = ''
 
   toDoDiv.appendChild(toDoLi)
 
@@ -33,5 +35,22 @@ function addToDo(event) {
   toDoDiv.appendChild(deleteBtn)
 
   toDoList.appendChild(toDoDiv)
+}
 
+//deletar ou check
+
+function checkOrDelete(event) {
+// console.log(event.target)
+
+  const item = event.target
+
+  if(item.classList[0] === 'delete-btn') {
+    const todo = item.parentElement
+    todo.remove()
+  }
+
+  if(item.classList[0] === 'completed-btn') {
+    const todo = item.parentElement
+    todo.classList.toggle('completed')
+  }
 }
